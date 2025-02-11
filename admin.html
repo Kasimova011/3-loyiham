@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2c2f33;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-form {
+  background-color: #23272a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  color: #ffffff;
+}
+
+.card-form h2 {
+  margin-bottom: 20px;
+  color: #ff7c00;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.card-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.card-form input[type="text"],
+.card-form input[type="url"],
+.card-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #99aab5;
+  color: #2c2f33;
+  font-size: 16px;
+}
+
+.card-form input:focus,
+.card-form textarea:focus {
+  outline: none;
+  background-color: #e3e5e8;
+}
+
+.card-form button {
+  background-color: #ff7c00;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.card-form button:hover {
+  background-color: #e66b00;
+}
+
+ </style>
+</head>
+<body>
+    <div class="card-form">
+        <h2>Yangi tovar qushish</h2>
+        <form id="addCardForm">
+          <div class="form-group">
+            <label for="title">Nomi</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Narxi</label>
+            <input type="url" id="price" name="price" required>
+
+          </div>
+          <div class="form-group">
+            <label for="image">Rasmi</label>
+            <input type="url" id="image" name="image" required>
+          </div>
+          <button type="submit" id="addPr">Qo'shish</button>
+          <br><br>
+          <button type="submit" onclick="see()">Tovarni Ko'rish</button>
+
+        </form>
+      </div>
+      
+      <script src="script.js"></script>
+      <script src="bd.js"></script>
+      <script src="./forAdd.js"></script>
+</body>
+</html>
